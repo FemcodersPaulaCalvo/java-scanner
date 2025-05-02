@@ -3,42 +3,37 @@ import java.util.Scanner;
 public class Bot {
     public static void main(String[] args) {
         //Crea el scanner
-        Scanner scannerName = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Hola, ¿Cómo te llamas?");
 
         //Recoge el dato
-        String name = scannerName.nextLine();
+        String name = scanner.nextLine();
         //Añade una nueva línea antes de mostrar la siguiente pregunta.
 
-        Scanner scannerCity = new Scanner(System.in);
         System.out.println("Hola " + name + "! Soy FemBot. ¿De qué ciudad eres?");
 
         //Recoge el dato
-        String city = scannerCity.nextLine();
+        String city = scanner.nextLine();
         //Añade una nueva línea antes de mostrar la siguiente pregunta.
 
-        Scanner scannerAge =  new Scanner(System.in);
         System.out.println("He escuchado que " + city + " es un encanto. Yo nací en Oracle city.");
         System.out.println("\n¿Cuántos años tienes?");
 
         //Recoge el dato
-        int age = scannerAge.nextInt();
+        int age = scanner.nextInt();
         //Añade una nueva línea antes de mostrar la siguiente pregunta.
 
-        Scanner scannerProgrammingLenguage = new Scanner(System.in);
         System.out.println("Entonces me dices que tienes " + age + " años. Yo tengo 400 años.");
         System.out.println("Eso quiere decir que soy " + 400/age + " veces más vieja que tu.");
         System.out.println("Basta de hablar de mi misma. ¿Cuál es tu lenguaje de programación favorito? (Por favor no digas Python)");
 
         //Recoge el dato
-        String programmingLenguaje = scannerProgrammingLenguage.nextLine();
+        String programmingLenguaje = scanner.nextLine();
         //Añade una nueva línea.
         System.out.println(programmingLenguaje + ", ¡Eso es excelente! Mucho gusto haber hablado contigo " + name + ", ¡Hablamos luego!");
 
-        scannerName.close();
-        scannerCity.close();
-        scannerAge.close();
-        scannerProgrammingLenguage.close();
+        scanner.close();
+
 
         //¿Te acordaste del nextLine trap?
         //Recuerda cerrar el scanner
