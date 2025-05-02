@@ -1,33 +1,48 @@
+import java.util.Scanner;
+
 public class Bot {
     public static void main(String[] args) {
         //Crea el scanner
-
+        Scanner scannerName = new Scanner(System.in);
         System.out.println("Hola, ¿Cómo te llamas?");
 
         //Recoge el dato
+        String name = scannerName.nextLine();
         //Añade una nueva línea antes de mostrar la siguiente pregunta.
 
-        System.out.println("Hola <name>! Soy FemBot. ¿De qué ciudad eres?");
+        Scanner scannerCity = new Scanner(System.in);
+        System.out.println("Hola " + name + "! Soy FemBot. ¿De qué ciudad eres?");
 
         //Recoge el dato
+        String city = scannerCity.nextLine();
         //Añade una nueva línea antes de mostrar la siguiente pregunta.
 
-        System.out.println("He escuchado que <location> es un encanto. Yo nací en Oracle city.");
+        Scanner scannerAge =  new Scanner(System.in);
+        System.out.println("He escuchado que " + city + " es un encanto. Yo nací en Oracle city.");
         System.out.println("\n¿Cuántos años tienes?");
 
         //Recoge el dato
+        int age = scannerAge.nextInt();
         //Añade una nueva línea antes de mostrar la siguiente pregunta.
 
-        System.out.println("Entonces me dices que tienes <age> años. Yo tengo 400 años.");
-        System.out.println("Eso quiere decir que soy <divide 400 por tu edad> veces más vieja que tu.");
+        Scanner scannerProgrammingLenguage = new Scanner(System.in);
+        System.out.println("Entonces me dices que tienes " + age + " años. Yo tengo 400 años.");
+        System.out.println("Eso quiere decir que soy " + 400/age + " veces más vieja que tu.");
         System.out.println("Basta de hablar de mi misma. ¿Cuál es tu lenguaje de programación favorito? (Por favor no digas Python)");
 
         //Recoge el dato
+        String programmingLenguaje = scannerProgrammingLenguage.nextLine();
         //Añade una nueva línea.
-        System.out.println("<language>, ¡Eso es excelente! Mucho gusto haber hablado contigo <name>, ¡Hablamos luego!");
+        System.out.println(programmingLenguaje + ", ¡Eso es excelente! Mucho gusto haber hablado contigo " + name + ", ¡Hablamos luego!");
 
+        scannerName.close();
+
+        scannerCity.close();
+
+        scannerAge.close();
+
+        scannerProgrammingLenguage.close();
         //¿Te acordaste del nextLine trap?
         //Recuerda cerrar el scanner
-
     }
 }
