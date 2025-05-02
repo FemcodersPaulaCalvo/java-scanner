@@ -36,12 +36,10 @@ public class Bot {
         System.out.println(programmingLenguaje + ", ¡Eso es excelente! Mucho gusto haber hablado contigo " + name + ", ¡Hablamos luego!");
 
         scannerName.close();
-
         scannerCity.close();
-
         scannerAge.close();
-
         scannerProgrammingLenguage.close();
+
         //¿Te acordaste del nextLine trap?
         //Recuerda cerrar el scanner
     }
